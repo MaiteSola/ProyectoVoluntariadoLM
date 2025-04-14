@@ -142,9 +142,9 @@
                     <div class="column">
                         <div class="box">
                             <h3 class="title is-3 has-text-centered is-txt4v">Calendario Personal</h3>
-                            <div class="calendar">
+                            <div class="calendarioPerfil">
                                 <div class="box">
-                                    <div id="calendar" class="has-text-centered"></div>
+                                    <div id="calendarioPerfil" class="has-text-centered"></div>
                                 </div>
                             </div>
                         </div>
@@ -178,6 +178,72 @@
                     </div>
                 </div>
             </div>
+            <div class="section-content" id="calendario">
+                <h1 class="title is-1 is-txt4v">Calendario</h1>
+                <div class="calendar-section">
+                    <div class="container-calendar">
+                        <div class="left">
+                            <div class="calendar">
+                                <div class="month">
+                                    <i class="fas fa-angle-left prev"></i>
+                                    <div class="date">diciembre 2015</div>
+                                    <i class="fas fa-angle-right next"></i>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Lun</div>
+                                    <div>Mar</div>
+                                    <div>Mié</div>
+                                    <div>Jue</div>
+                                    <div>Vie</div>
+                                    <div>Sáb</div>
+                                    <div>Dom</div>
+                                </div>
+                                <div class="days"></div>
+                                <div class="goto-today">
+                                    <div class="goto">
+                                        <input type="text" placeholder="mm/aaaa" class="date-input">
+                                        <button class="goto-btn">Ir</button>
+                                    </div>
+                                    <button class="today-btn">Hoy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="today-date">
+                                <div class="event-day">mié</div>
+                                <div class="event-date">12 de diciembre de 2022</div>
+                            </div>
+                            <div class="events"></div>
+                            <div class="add-event-wrapper">
+                                <div class="add-event-header">
+                                    <div class="title-new-event">Agregar Evento</div>
+                                    <i class="fas fa-times close"></i>
+                                </div>
+                                <div class="add-event-body">
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Nombre del Evento" class="event-name">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Inicio del Evento"
+                                            class="event-time-from">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
+                                    </div>
+                                </div>
+                                <div class="add-event-footer">
+                                    <button class="add-event-btn">Agregar Evento</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-event">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
 
             <div class="section-content is-visible" id="estadisticas">
                 <h1 class="title is-1 is-txt4v">Estadísticas</h1>
@@ -243,7 +309,7 @@
 
 
 
-                
+
             </div>
 
             <div class="section-content" id="gestion">
@@ -333,7 +399,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="columns is-multiline box mt-1">
+                <div class="columns is-multiline box mt-1" id="user-list">
+                    <div class="column is-4 user-card" data-nombre="Juan Pérez" data-curso="DAM"
+                        data-voluntariado="Social" data-disponibilidad="Mañana">
+                        <div class="box">
+                            <div class="columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="./../img/icons/miavatar.png" alt="Foto de perfil">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h3 class="title is-5">Juan Pérez</h3>
+                                    <p><strong>Email:</strong> juan.perez@example.com</p>
+                                    <p><strong>Ciclo:</strong> 1</p>
+                                    <p><strong>Curso:</strong> DAM</p>
+                                    <p><strong>Tipo Voluntariado:</strong> Social</p>
+                                    <p><strong>Disponibilidad:</strong> Mañana</p>
+                                </div>
+                            </div>
+                            <div class="buttons mt-3">
+                                <button class="button is-small is-danger">Eliminar</button>
+                                <button class="button is-small is-info">Enviar Mensaje</button>
+                                <button class="button is-small is-success">Añadir a Actividad</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- TODO: AGREGAR QUE SE PUEDE HACER CON LOS USUARIOS (Eliminar voluntario - Enviar mensaje - Añadir a Actividad - ) -->
                 </div>
             </div>
@@ -346,6 +438,8 @@
     </div>
     <script src="./../js/organizador/org_tabs.js"></script>
     <script src="./../js/organizador/org_cal_perfil.js"></script>
+    <script src="./../js/organizador/Organizador-calendario.js"></script>
+    <script src="./../js/organizador/filtrado.js"></script>
 </body>
 
 </html>

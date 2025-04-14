@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const calendarContainer = document.getElementById("calendar");
+    const calendarContainer = document.getElementById("calendarioPerfil");
 
     function generateCalendar(year, month) {
         const date = new Date(year, month, 1);
